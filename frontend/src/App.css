@@ -1,0 +1,122 @@
+/* Reset básico */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1e1e2f, #282a36, #1e1e2f, #282a36);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Animação suave do gradiente */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container ocupa toda a tela */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Caixa de login */
+.login-box {
+  background: rgba(30, 30, 50, 0.9);
+  padding: 4rem 5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  width: 450px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #fff;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
+}
+
+/* Título */
+.login-box h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #61dafb;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #61dafb;
+}
+
+/* Inputs */
+.login-box input {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  background-color: rgba(50, 50, 70, 0.8);
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.login-box input::placeholder {
+  color: #bbb;
+}
+
+.login-box input:focus {
+  border: 2px solid #61dafb;
+  background-color: rgba(60, 60, 90, 0.9);
+  box-shadow: 0 0 12px #61dafb;
+}
+
+/* Botão com efeito glow */
+.login-box button {
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #61dafb;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px #61dafb70;
+  transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #21a1f1;
+  box-shadow: 0 0 25px #61dafb;
+  transform: scale(1.05);
+}
+
+/* Mensagem */
+.message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .login-box {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+}
